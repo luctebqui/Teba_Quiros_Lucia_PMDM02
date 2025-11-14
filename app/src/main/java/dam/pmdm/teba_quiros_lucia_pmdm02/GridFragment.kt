@@ -1,6 +1,5 @@
 package dam.pmdm.teba_quiros_lucia_pmdm02
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -39,7 +38,7 @@ class GridFragment : Fragment() {
             Pikmin(getString(R.string.pikmin_luminoso), getString(R.string.detalle_luminoso), getString(R.string.habilidad_luminoso))
         )
 
-        binding.pikminRecyclerview.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.pikminRecyclerview.layoutManager = GridLayoutManager(requireContext(), 3)
         binding.pikminRecyclerview.adapter =
             MyAdapter(pikminList) { selectedType ->
                 Toast.makeText(
