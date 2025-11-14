@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Teba_Quiros_Lucia_PMDM02</string>
+    <string name="pikmin_rojo">Red pikmin</string>
+    <string name="pikmin_amarillo">Yellow pikmin</string>
+    <string name="pikmin_azul">Blue pikmin</string>
+    <string name="pikmin_blanco">White pikmin</string>
+    <string name="pikmin_morado">Purple pikmin</string>
+    <string name="pikmin_petreo">Rock pikmin</string>
+    <string name="pikmin_alado">Winged pikmin</string>
+    <string name="pikmin_gelido">Ice pikmin</string>
+    <string name="pikmin_luminoso">Glow pikmin</string>
+    <string name="detalle_rojo">Scarlet-colored body and pointed nose. In addition to the plant-like features of their species, they exhibit animal characteristics such as a strong fighting spirit and a high degree of curiosity.</string>
+    <string name="habilidad_luminoso">Nocturnal behavior, luminous.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detalle_luminoso">Their bodies are a radiant green. When the leaf on their heads blooms, it takes on a star shape. They have several characteristics that distinguish them from other types of Pikmin; one of these is that instead of sprouting from onions, they sprout from Lumilomas, which are only found at night and in underground regions.</string>
+    <string name="habilidad_rojo">High adaptability, heat resistant.</string>
+    <string name="detalle_amarillo">Yellow body and a pair of ear-like lamellae that allow them to dig quickly and reach great heights when thrown.</string>
+    <string name="habilidad_amarillo">Electrical conductors, resistant to electrical damage.</string>
+    <string name="detalle_azul">Blue body and indecipherable facial expression.</string>
+    <string name="habilidad_azul">They breathe underwater.</string>
+    <string name="detalle_blanco">White body and red eyes. Their small bodies secrete a potent poison, which in turn makes them immune to it. Their seeds can be obtained from ivory bouncing sprouts that only grow in underground regions.</string>
+    <string name="habilidad_blanco">" Poison resistant."</string>
+    <string name="detalle_morado">Robust and resilient body. They can only be born from bouncing shoots found only in underground regions, so they are considered a unique species.</string>
+    <string name="habilidad_morado">Strong, heavy.</string>
+    <string name="detalle_petreo">They are a type of parasitic Pikmin called Ermikmin that takes a stone as a host and, similar to a seed that takes root through cracks in a rock, the Pikmin\'s roots penetrate the stone.</string>
+    <string name="habilidad_petreo">Unbreakable, robust, non-sticky.</string>
+    <string name="detalle_alado">Pink bodies and prominent blue eyes that resemble glasses. They move nimbly through the air with their wings, but their attacks don\'t cause much damage.</string>
+    <string name="habilidad_alado">Flight capability, weak.</string>
+    <string name="detalle_gelido">" A parasitic subtype of Pikmin called Ermikmin. They obtain and maintain their bodies through a process that uses their low-temperature core to constantly generate new ice from ambient moisture."</string>
+    <string name="habilidad_gelido">Freezing properties, cold immunity.</string>
+</resources>

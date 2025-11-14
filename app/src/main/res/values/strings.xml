@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Teba_Quiros_Lucia_PMDM02</string>
+    <!--TIPOS DE PIKMIN-->
+    <string name="pikmin_rojo">Pikmin rojo</string>
+    <string name="pikmin_amarillo">Pikmin amarillo</string>
+    <string name="pikmin_azul">Pikmin azul</string>
+    <string name="pikmin_blanco">Pikmin blanco</string>
+    <string name="pikmin_morado">Pikmin morado</string>
+    <string name="pikmin_petreo">Pikmin pétro</string>
+    <string name="pikmin_alado">Pikmin alado</string>
+    <string name="pikmin_gelido">Pikmin gélido</string>
+    <string name="pikmin_luminoso">Pikmin luminoso</string>
+    <!--DESCRIPCIÓN DE PIKMIN-->
+    <string name="detalle_rojo">Cuerpo de color escarlata y nariz puntiaguda. Además de los rasgos vegetales propios de su especie, presentan características animales como un fuerte espíritu combativo y un grado elevado de curiosidad.</string>
+    <string name="detalle_amarillo">Cuerpo de color amarillo y un par de lamelas semejantes a orejas que les permiten cavar con rapidez y alcanzar grandes alturas al ser lanzados.</string>
+    <string name="detalle_azul">Cuerpo de color azul y expresión facial indescifrable. </string>
+    <string name="detalle_blanco">Cuerpo blanco y ojos rojos. Sus pequeños cuerpos segregan un potente veneno, lo que a su vez los hace inmunes a él. Sus semillas se pueden obtener por medio de brotes rebotadores marfil que solo crecen en regiones subterráneas.</string>
+    <string name="detalle_morado">Cuerpo robusto y resistente. Solo pueden nacer a partir de brotes rebotadores que solo se encuentran en regiones subterráneas, por lo que son considerados una especie única.</string>
+    <string name="detalle_petreo">Son un tipo de Pikmin parasitario llamado "Ermikmin" que toma como huésped una piedra y, de manera similar a una semilla que echa raíces a través de las grietas de una roca, las raíces del Pikmin penetran la piedra.</string>
+    <string name="detalle_alado">Cuerpo de color rosa y prominentes ojos azules que parecen lentes. Se desplazan ágilmente por los aires con sus alas, pero sus ataques no causan mucho daño.</string>
+    <string name="detalle_gelido">Subtipo parasitario de Pikmin llamado "Ermikmin". Obtienen y mantienen su cuerpo a través de un proceso que utiliza su núcleo de baja temperatura para generar constantemente hielo nuevo de la humedad del ambiente.</string>
+    <string name="detalle_luminoso">Cuerpo de color verde radiante. Al florecer la hoja que tienen en la cabeza, esta toma una forma de estrella. Tienen varias características que los distinguen de los otros tipos de Pikmin, una de ellas es que en vez de brotar de cebollas brotan de lumilomas que solo se encuentran en la noche y en regiones subterráneas.</string>
+    <!--HABILIDAD DE PIKMIN-->
+    <string name="habilidad_rojo">Gran capacidad de adaptación, resistentes al calor.</string>
+    <string name="habilidad_amarillo">Conducen la electricidad, resisten la electricidad.</string>
+    <string name="habilidad_azul">Respiran bajo agua.</string>
+    <string name="habilidad_blanco">Resistente al veneno.</string>
+    <string name="habilidad_morado">Fuerte, pesado. </string>
+    <string name="habilidad_petreo">Inquebrantables, robustos, no adherentes.</string>
+    <string name="habilidad_alado">Capacidad de vuelo, débil.</string>
+    <string name="habilidad_gelido">Propiedades de congelamiento, inmunidad al frío.</string>
+    <string name="habilidad_luminoso">Nocturno, luminoso.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
