@@ -27,15 +27,15 @@ class GridFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         pikminList = listOf(
-            Pikmin(getString(R.string.pikmin_rojo), getString(R.string.detalle_rojo), getString(R.string.habilidad_rojo)),
-            Pikmin(getString(R.string.pikmin_amarillo), getString(R.string.detalle_amarillo), getString(R.string.habilidad_amarillo)),
-            Pikmin(getString(R.string.pikmin_azul), getString(R.string.detalle_azul), getString(R.string.habilidad_azul)),
-            Pikmin(getString(R.string.pikmin_blanco), getString(R.string.detalle_blanco), getString(R.string.habilidad_blanco)),
-            Pikmin(getString(R.string.pikmin_morado), getString(R.string.detalle_morado), getString(R.string.habilidad_morado)),
-            Pikmin(getString(R.string.pikmin_petreo), getString(R.string.detalle_petreo), getString(R.string.habilidad_petreo)),
-            Pikmin(getString(R.string.pikmin_alado), getString(R.string.detalle_alado), getString(R.string.habilidad_alado)),
-            Pikmin(getString(R.string.pikmin_gelido), getString(R.string.detalle_gelido), getString(R.string.habilidad_gelido)),
-            Pikmin(getString(R.string.pikmin_luminoso), getString(R.string.detalle_luminoso), getString(R.string.habilidad_luminoso))
+            Pikmin(0,getString(R.string.pikmin_rojo), getString(R.string.detalle_rojo), getString(R.string.habilidad_rojo)),
+            Pikmin(1,getString(R.string.pikmin_amarillo), getString(R.string.detalle_amarillo), getString(R.string.habilidad_amarillo)),
+            Pikmin(2,getString(R.string.pikmin_azul), getString(R.string.detalle_azul), getString(R.string.habilidad_azul)),
+            Pikmin(3,getString(R.string.pikmin_blanco), getString(R.string.detalle_blanco), getString(R.string.habilidad_blanco)),
+            Pikmin(4,getString(R.string.pikmin_morado), getString(R.string.detalle_morado), getString(R.string.habilidad_morado)),
+            Pikmin(5,getString(R.string.pikmin_petreo), getString(R.string.detalle_petreo), getString(R.string.habilidad_petreo)),
+            Pikmin(6,getString(R.string.pikmin_alado), getString(R.string.detalle_alado), getString(R.string.habilidad_alado)),
+            Pikmin(7,getString(R.string.pikmin_gelido), getString(R.string.detalle_gelido), getString(R.string.habilidad_gelido)),
+            Pikmin(8,getString(R.string.pikmin_luminoso), getString(R.string.detalle_luminoso), getString(R.string.habilidad_luminoso))
         )
 
         binding.pikminRecyclerview.layoutManager = GridLayoutManager(requireContext(), 3)

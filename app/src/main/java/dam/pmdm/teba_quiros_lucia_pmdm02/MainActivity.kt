@@ -11,12 +11,19 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.snackbar.Snackbar
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen().apply {
+            setKeepOnScreenCondition {
+                Thread.sleep(1500)
+                false
+            }
+        }
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -31,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.mainToolbar)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
-                binding.mainToolbar.setupWithNavController(navController, appBarConfiguration)
+        binding.mainToolbar.setupWithNavController(navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -43,7 +43,7 @@ android {
 dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.6")
     implementation("androidx.navigation:navigation-ui:2.9.6")
-    implementation("androidx.core:core-splashscreen:1.2.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
