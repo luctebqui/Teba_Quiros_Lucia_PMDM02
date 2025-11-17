@@ -10,19 +10,43 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.FragmentGridBinding
 
+/**
+ * Fragmento que contiene la cuadrícula de pikmin disponibles. Cuando
+ * se selecciona uno de los pikmin, navegará a la pantalla de detalle (DetailFragment).
+ */
 class GridFragment : Fragment() {
+    /**
+     * Objeto binding que proporciona acceso al layout fragment_grid.xml.
+     */
     private lateinit var binding: FragmentGridBinding
+
+    /**
+     * Lista de pikmin disponibles.
+     */
     private lateinit var pikminList: List<Pikmin>
 
+    /**
+     * Esta funcion infla  el layout fragment_grid.xml.
+     * @param inflater puede usarse para inflar vistas en el fragmento.
+     * @param container Si no es nulo, este es el padre al que la vista del fragmento debe ser adjuntada.
+     * @param savedInstanceState Si no es nulo, se está reconstruyendo a partir de un estado previo guardado.
+     * @return vista raiz del fragmento.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentGridBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    /**
+     * Función a la que se llama una vez ejecutada la función anterior (onCreateView). Aquí se inicializa
+     * la lista de pikmin, se configura el RecycledView con un GridLayoutManager y se establece
+     * el adaptador definido en la clase MyAdapter.kt
+     * @param view vista devuelta en onCreateView.
+     * @param savedInstanceState estado guardado de la instancia del fragmento.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

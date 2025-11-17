@@ -16,9 +16,23 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.ActivityMainBinding
 
+/**
+ * Esta clase contiene la actividad principal que contendrá la toolbar y el FragmentContentView
+ * donde se mostrará la información de los pikmin.
+ */
 class MainActivity : AppCompatActivity() {
+    /**
+     * Objeto binding que proporciona acceso al layout activity_main.xml.
+     */
     private lateinit var binding: ActivityMainBinding
 
+    /**
+     * Esta función primero instala una SplashScreen con 1,5 segundos de duración y recuperan las
+     * preferencias guardadas (tema e idioma). Después se infla e inicializa la actividad,
+     * que contendrá un snackbar de bienvenida,un menú de navegación definido en el fichero
+     * nav_graph.xml y la toolbar.
+     * @param savedInstanceState Si no es nulo, se está reconstruyendo a partir de un estado previo guardado.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen().apply {
             setKeepOnScreenCondition {
@@ -50,12 +64,23 @@ class MainActivity : AppCompatActivity() {
         binding.mainToolbar.setupWithNavController(navController, appBarConfiguration)
     }
 
+    /**
+     * Función que genera el menú de la toolbar (menu.xml).
+     * @param menu corresponde con el menu que se va a inflar.
+     * @return true una vez inflado el layout del menu correctamente.
+     */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return true
     }
 
+    /**
+     * Función por la que se le da funcionalidad a cada uno de los elementos que constituyen el menú
+     * de la toolbar.
+     * @param item corresponde con el elemento al que se le va a dar funcionalidad del menú.
+     * @return true cuando se selecciona uno de los elementos del menu con una funcionalidad.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.acerca_de -> {

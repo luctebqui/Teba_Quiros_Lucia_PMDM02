@@ -9,8 +9,24 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.FragmentSettingsBinding
 
+/**
+ * Fragmento que permite configurar las preferencias de idioma y estilo.
+ */
 class SettingsFragment : Fragment() {
+    /**
+     * Objeto binding que proporciona acceso al layout fragment_settings.xml.
+     */
     private lateinit var binding: FragmentSettingsBinding
+
+    /**
+     * Esta función infla  el layout fragment_settings.xml después de comprobar las preferencias
+     * previamente seleccionadas y de darle funcionalidad a cada uno de los switch presentes en
+     * dicho layout.
+     * @param inflater puede usarse para inflar vistas en el fragmento.
+     * @param container Si no es nulo, este es el padre al que la vista del fragmento debe ser adjuntada.
+     * @param savedInstanceState Si no es nulo, se está reconstruyendo a partir de un estado previo guardado.
+     * @return vista raiz del fragmento.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -50,6 +66,10 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Mediante esta función se modifica el estado de los switch en función de las preferencias
+     * guardadas en usos anteriores de la aplicación.
+     */
     private fun initializeSwitchState() {
         val currentTag = PreferenceManager.getSavedLanguage(requireContext())
         binding.switchLanguage.isChecked = currentTag == "en"
