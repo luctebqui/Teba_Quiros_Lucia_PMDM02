@@ -11,20 +11,22 @@
         android:id="@+id/switch_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Idioma - español/inglés   "
+        android:text="@string/idioma"
         android:textSize="25dp"
         android:layout_margin="20dp"
         android:padding="10dp"
-        android:checked="false" />
+        android:checked="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/switch_theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tema - claro/oscuro         "
+        android:text="@string/tema"
         android:layout_margin="20dp"
         android:padding="10dp"
         android:textSize="25dp"
-        android:checked="false" />
+        android:checked="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 </LinearLayout>

@@ -32,4 +32,11 @@
     <string name="habilidad_luminoso">Nocturno, luminoso.</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="seleccion">Pikmin seleccionado:</string>
+    <string name="bienvenida">¡Bienvenidos al mundo Pikmin!</string>
+    <string name="acerca_de">Aplicación desarrollada por Lucía Teba Quirós. Version 1.0.</string>
+    <string name="acerca">Acerca de...</string>
+    <string name="idioma">Idioma - español/inglés</string>
+    <string name="tema">Tema - claro/oscuro</string>
+    <string name="ajustes">Ajustes</string>
 </resources>

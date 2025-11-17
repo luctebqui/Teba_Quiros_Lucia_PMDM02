@@ -6,6 +6,8 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -24,17 +26,21 @@ class MainActivity : AppCompatActivity() {
                 false
             }
         }
+
+        val savedLocaleTag = LanguagePreferenceManager.getSavedLocale(this)
+        val appLocale = LocaleListCompat.forLanguageTags(savedLocaleTag)
+        AppCompatDelegate.setApplicationLocales(appLocale)
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         Snackbar.make(findViewById(R.id.snackbar_text),
-            "¡Bienvenidos al mundo Pikmin!",
+            getString(R.string.bienvenida),
             Snackbar.LENGTH_SHORT).show()
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
-
 
         setSupportActionBar(binding.mainToolbar)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
@@ -51,8 +57,8 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.acerca_de -> {
                 val mensajeAcercaDe: AlertDialog.Builder = AlertDialog.Builder(this)
-                mensajeAcercaDe.setTitle("Acerca de...")
-                    .setMessage("Aplicación desarrollada por Lucía Teba Quirós. Version 1.0.").show()
+                mensajeAcercaDe.setTitle(getString(R.string.acerca))
+                    .setMessage(getString(R.string.acerca_de)).show()
                 true
             }
             R.id.ajustes -> {

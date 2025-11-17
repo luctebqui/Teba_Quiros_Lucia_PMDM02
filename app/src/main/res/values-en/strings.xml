@@ -29,4 +29,11 @@
     <string name="habilidad_alado">Flight capability, weak.</string>
     <string name="detalle_gelido">" A parasitic subtype of Pikmin called Ermikmin. They obtain and maintain their bodies through a process that uses their low-temperature core to constantly generate new ice from ambient moisture."</string>
     <string name="habilidad_gelido">Freezing properties, cold immunity.</string>
+    <string name="seleccion">"Selected pikmin: "</string>
+    <string name="bienvenida">Welcome to Pikmin world!</string>
+    <string name="acerca_de">Application developed by Lucía Teba Quirós. 1.0 version.</string>
+    <string name="acerca">About...</string>
+    <string name="idioma">Language - spanish/english</string>
+    <string name="tema">Theme -  light/dark</string>
+    <string name="ajustes">Settings</string>
 </resources>

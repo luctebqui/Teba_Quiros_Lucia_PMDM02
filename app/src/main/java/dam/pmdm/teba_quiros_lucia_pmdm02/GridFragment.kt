@@ -43,7 +43,7 @@ class GridFragment : Fragment() {
             MyAdapter(pikminList) { selectedType ->
                 Toast.makeText(
                     requireContext(),
-                    "Se ha seleccionado el ${selectedType.type}",
+                    getString(R.string.seleccion)+ selectedType.type,
                     Toast.LENGTH_SHORT
                 ).show()
                 val bundle = Bundle()
