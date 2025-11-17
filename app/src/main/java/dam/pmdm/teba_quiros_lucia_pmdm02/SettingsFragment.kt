@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -21,13 +20,28 @@ class SettingsFragment : Fragment() {
         initializeSwitchState()
 
         binding.switchLanguage.setOnCheckedChangeListener { _, isChecked ->
-            val localeTag = if (isChecked) "en" else "es"
-            LanguagePreferenceManager.saveLocale(requireContext(), localeTag)
-            val newLocales = LocaleListCompat.forLanguageTags(localeTag)
-            AppCompatDelegate.setApplicationLocales(newLocales)
+            val language = if (isChecked) "en" else "es"
+            PreferenceManager.saveLanguage(requireContext(), language)
             binding.root.post {
                 val intent = Intent(requireActivity(), MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                binding.switchLanguage.isEnabled = false
+                startActivity(intent)
+                requireActivity().finish()
+            }
+        }
+
+        binding.switchTheme.setOnCheckedChangeListener { _, isChecked ->
+            val themeMode = if (isChecked) {
+                AppCompatDelegate.MODE_NIGHT_YES
+            } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+            }
+            PreferenceManager.saveThemeMode(requireContext(), themeMode)
+            binding.root.post {
+                val intent = Intent(requireActivity(), MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                binding.switchTheme.isEnabled = false
                 startActivity(intent)
                 requireActivity().finish()
             }
@@ -37,7 +51,10 @@ class SettingsFragment : Fragment() {
     }
 
     private fun initializeSwitchState() {
-        val currentTag = LanguagePreferenceManager.getSavedLocale(requireContext())
+        val currentTag = PreferenceManager.getSavedLanguage(requireContext())
         binding.switchLanguage.isChecked = currentTag == "en"
+
+        val currentThemeMode = PreferenceManager.getSavedThemeMode(requireContext())
+        binding.switchTheme.isChecked = currentThemeMode == AppCompatDelegate.MODE_NIGHT_YES
     }
 }

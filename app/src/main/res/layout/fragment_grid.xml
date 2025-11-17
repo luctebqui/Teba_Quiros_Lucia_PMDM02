@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GridFragment"
-    android:background="@color/green"
-    android:padding="10dp">
+    android:theme="@style/Theme.GreenBackground">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pikmin_recyclerview"

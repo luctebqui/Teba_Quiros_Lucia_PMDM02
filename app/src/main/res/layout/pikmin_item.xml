@@ -5,28 +5,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     android:padding="5dp"
-    android:layout_margin="5dp"
-    android:backgroundTint="@color/transparentwhite">
+    android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:theme="@style/Theme.ItemTransparency">
 
         <ImageView
             android:id="@+id/pikminImage"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:theme="@style/Theme.ItemTransparency"/>
 
         <TextView
             android:id="@+id/pikmin_type"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:padding="10dp"
+            android:padding="5dp"
             android:layout_gravity="center"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:theme="@style/Theme.ItemTransparency"/>
 
     </LinearLayout>
 

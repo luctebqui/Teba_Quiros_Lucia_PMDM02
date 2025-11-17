@@ -36,4 +36,6 @@
     <string name="idioma">Language - spanish/english</string>
     <string name="tema">Theme -  light/dark</string>
     <string name="ajustes">Settings</string>
+    <string name="detalle_pikmin">Pikmin Details</string>
+    <string name="pikmin">Pikmin</string>
 </resources>

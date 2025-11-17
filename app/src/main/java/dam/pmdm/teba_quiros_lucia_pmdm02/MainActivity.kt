@@ -27,7 +27,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val savedLocaleTag = LanguagePreferenceManager.getSavedLocale(this)
+        val savedThemeMode = PreferenceManager.getSavedThemeMode(this)
+        AppCompatDelegate.setDefaultNightMode(savedThemeMode)
+
+        val savedLocaleTag = PreferenceManager.getSavedLanguage(this)
         val appLocale = LocaleListCompat.forLanguageTags(savedLocaleTag)
         AppCompatDelegate.setApplicationLocales(appLocale)
 

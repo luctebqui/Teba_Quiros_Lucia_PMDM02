@@ -2,8 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="transparentwhite">#83EFFFFF</color>
-    <color name="green">#88BC8D</color>
-    <color name="greygreen">#006600</color>
-    <color name="darkgreen">#4FB06D</color>
+    <color name="itemcolor">#83EFFFFF</color>
+    <color name="itemcolornight">#9ba3a3</color>
+    <color name="backgroundgreen">#78CF83</color>
+    <color name="backgroundgreennight">#6D7A70</color>
+    <color name="toolbargreen">#5FA86F</color>
 </resources>

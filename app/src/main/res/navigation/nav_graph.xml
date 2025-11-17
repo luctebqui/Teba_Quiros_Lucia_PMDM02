@@ -8,16 +8,16 @@
     <fragment
         android:id="@+id/gridFragment"
         android:name="dam.pmdm.teba_quiros_lucia_pmdm02.GridFragment"
-        android:label="Pikmin"
+        android:label="@string/pikmin"
         tools:layout="@layout/fragment_grid" />
     <fragment
         android:id="@+id/detailsFragment"
         android:name="dam.pmdm.teba_quiros_lucia_pmdm02.DetailsFragment"
-        android:label="Detalle Pikmin"
+        android:label="@string/detalle_pikmin"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="dam.pmdm.teba_quiros_lucia_pmdm02.SettingsFragment"
-        android:label="Ajustes"
+        android:label="@string/ajustes"
         tools:layout="@layout/fragment_settings" />
 </navigation>
