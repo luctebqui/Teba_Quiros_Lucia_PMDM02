@@ -14,17 +14,26 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.snackbar.Snackbar
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.iterator
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.savedstate.SavedState
 import dam.pmdm.teba_quiros_lucia_pmdm02.databinding.ActivityMainBinding
 
 /**
  * Esta clase contiene la actividad principal que contendrá la toolbar y el FragmentContentView
  * donde se mostrará la información de los pikmin.
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {
     /**
      * Objeto binding que proporciona acceso al layout activity_main.xml.
      */
     private lateinit var binding: ActivityMainBinding
+
+    /**
+     * Objeto para contener el menu del toolbar
+     */
+    private var menu: Menu? = null
 
     /**
      * Esta función primero instala una SplashScreen con 1,5 segundos de duración y recuperan las
@@ -52,12 +61,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Snackbar.make(findViewById(R.id.snackbar_text),
+        Snackbar.make(
+            findViewById(R.id.snackbar_text),
             getString(R.string.bienvenida),
-            Snackbar.LENGTH_SHORT).show()
+            Snackbar.LENGTH_SHORT
+        ).show()
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
+        navController.addOnDestinationChangedListener(this)
 
         setSupportActionBar(binding.mainToolbar)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
@@ -70,6 +83,7 @@ class MainActivity : AppCompatActivity() {
      * @return true una vez inflado el layout del menu correctamente.
      */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        this.menu = menu
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return true
@@ -89,12 +103,42 @@ class MainActivity : AppCompatActivity() {
                     .setMessage(getString(R.string.acerca_de)).show()
                 true
             }
+
             R.id.ajustes -> {
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment)?.findNavController()
                     ?.navigate(R.id.settingsFragment)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    /**
+     * Función que modifica la visibilidad de los item del menu
+     * @param show booleano que se utiliza para saber si los item se ocultan o se muestran
+     */
+    fun showMenu(show: Boolean) {
+        for (item in menu!!.iterator()) {
+            item.isVisible = show
+        }
+    }
+
+    /**
+     * Función que oculta el menu de la toolbar cuando el fragmento que se visualiza es gridFragment
+     * @param controller controlador de navegación
+     * @param destination fragmento que se va a mostrar en el RecyclerView
+     * @param arguments Si no es nulo, la aplicación ya estaba en uso
+     */
+    override fun onDestinationChanged(
+        controller: NavController,
+        destination: NavDestination,
+        arguments: SavedState?
+    ) {
+        if (destination.id == R.id.gridFragment) {
+            showMenu(true)
+        } else {
+            showMenu(false)
         }
     }
 }
