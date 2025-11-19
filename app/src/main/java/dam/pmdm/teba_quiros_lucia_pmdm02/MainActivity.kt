@@ -119,8 +119,10 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
      * @param show booleano que se utiliza para saber si los item se ocultan o se muestran
      */
     fun showMenu(show: Boolean) {
-        for (item in menu!!.iterator()) {
-            item.isVisible = show
+        if(menu!=null){
+            for (item in menu!!.iterator()) {
+                item.isVisible = show
+            }
         }
     }
 
